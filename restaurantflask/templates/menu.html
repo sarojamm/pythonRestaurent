@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <h1> {{ restaurant.name }}</h1>
+  <a href='/restaurants/{{ restaurant.id }}/new'> New Menu Item</a>
+</p>
+
+{%for i in items %}
+   {{ i.id }} | {{ i.restaurant_id }} | {{ i.name }} | {{ i.description }} | {{ i.price }} |
+    <a href='/restaurants/{{ restaurant.id }}/{{ i.id }}/edit'> Edit</a> |
+    <a href='/restaurants/{{ restaurant.id }}/{{ i.id }}/delete'> Delete</a>
+    </br>
+{% endfor %}
+{%for restaurant1 in restaurants %}
+   {{ restaurant1.name }}  |
+    <a href='/restaurants/{{ restaurant1.id }}/'> View</a> |
+     <a href='/restaurants/{{ restaurant1.id }}/edit'> Edit</a> |
+     <a href='/restaurants/{{ restaurant1.id }}/delete'> Delete</a>
+    </br>
+{% endfor %}
+
+</body>
+</html>
+
+

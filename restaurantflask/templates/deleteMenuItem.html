@@ -1,0 +1,15 @@
+<html>
+
+<body>
+<h1> Are you sure you want to delete {{item.name}}? </h1>
+
+<form action='/restaurants/{{item.restaurant_id}}/{{item.id }}/delete'  method = 'post'>
+
+<input type='submit', value = 'Delete'>
+
+</form>
+
+<a href = '/restaurants/{{item.restaurant_id}}' > Cancel </a>
+</body>
+
+</html>

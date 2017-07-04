@@ -31,8 +31,7 @@ items = session.query(MenuItem).all()
 for item in items:
     print item.name
 
-#found the veggie burger that belonged to the Urban Burger restaurant 
-#by executing the following query:
+#found the veggie burger that belonged to the Urban Burger restaurant by executing the following query:
 veggieBurgers = session.query(MenuItem).filter_by(name= 'Veggie Burger')
 for veggieBurger in veggieBurgers:
     print veggieBurger.id
